@@ -1,0 +1,2 @@
+# NRPeriods
+Calculate NR Periods
