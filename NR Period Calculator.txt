@@ -1,8 +1,9 @@
 (iDate as date)  =>
 let
+    ddmmFinancialPeriod = "01/04/",
     iYear = Date.Year(iDate),
-    i1stApril = Date.FromText("01/04/"&Number.ToText(iYear)),
-    i1stAprilPrevious = Date.FromText("01/04/"&Number.ToText(iYear-1)),
+    i1stApril = Date.FromText(ddmmFinancialPeriod & Number.ToText(iYear)),
+    i1stAprilPrevious = Date.FromText(ddmmFinancialPeriod & Number.ToText(iYear-1)),
     iAprilAdjustment = 
         if iDate>=i1stApril 
             then 
