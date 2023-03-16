@@ -39,7 +39,10 @@ let
         "Period " & Number.ToText(periodNumber),
 
     abbreviatedPeriodName = 
-        "P" & Number.ToText(periodNumber),
+        if periodNumber < 10 
+        then "P0" & Number.ToText(periodNumber)
+        else "P" & Number.ToText(periodNumber),
+
 
     financialYear = 
         if Date.Month(iDate) < 4 
